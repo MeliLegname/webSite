@@ -231,13 +231,9 @@ export const CvDocument = ({ cv }: CvDocumentProps) => {
           <Text style={styles.name}>{profile.name}</Text>
           <Text style={styles.title}>{profile.title}</Text>
           <Text style={styles.contactRow}>
-            {profile.contact.location} · {profile.contact.email} ·{" "}
+            {profile.contact.location} · {profile.contact.email} · {profile.contact.phone} ·{" "}
             <Link src={profile.contact.linkedin.url} style={styles.link}>
               linkedin.com/in{profile.contact.linkedin.label}
-            </Link>{" "}
-            ·{" "}
-            <Link src={profile.contact.github.url} style={styles.link}>
-              github.com{profile.contact.github.label}
             </Link>
           </Text>
         </View>

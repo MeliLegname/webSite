@@ -9,6 +9,7 @@ export const CV: CvType = {
     contact: {
       location: "Ituzaingó, GBA, Argentina",
       email: "melisalegname1995@gmail.com",
+      phone: "+54 9 11 3601-0021",
       linkedin: {
         label: "/melisa-legname",
         url: "https://www.linkedin.com/in/melisa-legname"
