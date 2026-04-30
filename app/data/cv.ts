@@ -51,7 +51,7 @@ export const CV: CvType = {
             "Lideré la evolución técnica de productos críticos en producción para ANSES y Provincia de Santa Fe.",
             "Dirijo equipo frontend de 7 personas con estructura autónoma y referentes técnicos por área.",
             "Co-creé @leafnoise/components, librería interna que estandariza UI en toda la suite y elimina trabajo repetitivo.",
-            "Modernicé la toolchain frontend (TailwindCSS, Vitest, Vite, Biome) y los pipelines de CI/CD."
+            "Lideré la adopción de TailwindCSS y colaboré en la modernización de Vitest, Vite y Biome, mejorando la toolchain frontend y los pipelines de CI/CD."
           ],
           results: [
             "Equipo creció de 4 a 7 personas, con promoción interna de referentes senior y nuevos líderes.",
@@ -227,5 +227,5 @@ export const CV: CvType = {
     { name: "Inglés", level: "Intermedio (B1)" }
   ],
   about:
-    "Mi cruce entre diseño y código es el eje de mi trabajo. Me importa entender qué necesita el usuario y el negocio, no solo escribir código. Disfruto definir estándares que ayuden al equipo a moverse más rápido sin perder calidad."
+    "Transformo equipos de desarrolladores en equipos que piensan en sistemas. No me importa solo el código: me importa cómo escala, cómo afecta al negocio, y cómo crece la gente. Mi métrica de éxito es el impacto: equipos más productivos, sistemas más mantenibles, usuarios más satisfechos."
 }
