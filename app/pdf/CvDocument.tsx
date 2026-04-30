@@ -1,5 +1,6 @@
 import type { CvType } from "@app/types"
-import { Document, Link, Page, StyleSheet, Text, View } from "@react-pdf/renderer"
+import { Document, Image, Link, Page, StyleSheet, Text, View } from "@react-pdf/renderer"
+import melisaPhoto from "../../public/melisa.png"
 
 const palette = {
   text: "#1a1a22",
@@ -19,10 +20,22 @@ const styles = StyleSheet.create({
     lineHeight: 1.55
   },
   header: {
+    display: "flex",
+    flexDirection: "row-reverse",
     borderBottomWidth: 1,
     borderBottomColor: palette.border,
     paddingBottom: 12,
-    marginBottom: 16
+    marginBottom: 16,
+    gap: 16
+  },
+  headerContent: {
+    flex: 1
+  },
+  headerPhoto: {
+    width: 80,
+    height: 80,
+    borderRadius: 80,
+    objectFit: "cover"
   },
   name: {
     fontSize: 22,
@@ -41,7 +54,7 @@ const styles = StyleSheet.create({
   contactRow: {
     fontSize: 9.5,
     color: palette.muted,
-    lineHeight: 1.5
+    lineHeight: 1.8
   },
   link: {
     color: palette.text,
@@ -226,16 +239,27 @@ export const CvDocument = ({ cv }: CvDocumentProps) => {
       keywords={`${profile.title}, ${techBadges.join(", ")}`}
     >
       <Page size="A4" style={styles.page}>
-        {/* Header: nombre, título, contacto en orden ATS-amigable */}
+        {/* Header: nombre, título, contacto con foto */}
         <View style={styles.header}>
-          <Text style={styles.name}>{profile.name}</Text>
-          <Text style={styles.title}>{profile.title}</Text>
-          <Text style={styles.contactRow}>
-            {profile.contact.location} · {profile.contact.email} · {profile.contact.phone} ·{" "}
-            <Link src={profile.contact.linkedin.url} style={styles.link}>
-              linkedin.com/in{profile.contact.linkedin.label}
-            </Link>
-          </Text>
+          <View style={styles.headerContent}>
+            <Text style={styles.name}>{profile.name}</Text>
+            <Text style={styles.title}>{profile.title}</Text>
+            <Text style={styles.contactRow}>
+              {profile.contact.email}
+            </Text>
+            <Text style={styles.contactRow}>
+              {profile.contact.phone}
+            </Text>
+            <Text style={styles.contactRow}>
+              <Link src={profile.contact.linkedin.url} style={styles.link}>
+                linkedin.com/in{profile.contact.linkedin.label}
+              </Link>
+            </Text>
+            <Text style={styles.contactRow}>
+              {profile.contact.location}
+            </Text>
+          </View>
+          <Image src={melisaPhoto} style={styles.headerPhoto} />
         </View>
 
         {/* Sobre mí: hook humano breve arriba */}
